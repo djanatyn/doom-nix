@@ -12,6 +12,7 @@
     overlay = final: prev: {
       ancient-aliens = final.callPackage ./ancient-aliens { };
       winters-fury = final.callPackage ./winters-fury { };
+      valiant = final.callPackage ./valiant { };
     };
 
     packages.x86_64-linux =
@@ -19,6 +20,7 @@
       in {
         ancient-aliens = pkgs.ancient-aliens;
         winters-fury = pkgs.winters-fury;
+        valiant = pkgs.valiant;
       };
 
     apps.x86_64_linux =
@@ -32,6 +34,11 @@
         winters-fury = {
           type = "app";
           program = "${pkgs.winters-fury}/bin/winters-fury";
+        };
+
+        valiant = {
+          type = "app";
+          program = "${pkgs.valiant}/bin/valiant";
         };
       };
   };
