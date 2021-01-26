@@ -1,4 +1,5 @@
-{ stdenv, fetchurl, makeWrapper, unzip, zandronum }:
+{ stdenv, fetchurl, makeWrapper, zandronum }:
+
 stdenv.mkDerivation {
   name = "ancient-aliens";
   version = "2016-07-17";
