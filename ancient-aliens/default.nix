@@ -8,7 +8,6 @@ stdenv.mkDerivation {
     url =
       "http://www.gamers.org/pub/idgames/levels/doom2/Ports/megawads/aaliens.zip";
     sha256 = "18wh7n9g5mw4v65cknfynv68cy8d94ks9di81s7a5yxdmqaynxvz";
-
   };
 
   buildInputs = [ makeWrapper ];
