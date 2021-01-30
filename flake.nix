@@ -10,6 +10,7 @@
 
   outputs = { self, nixpkgs, ... }: {
     overlay = final: prev: rec {
+      doom-nix-update = final.callPackage ./doom-nix-update { };
       ancient-aliens = final.callPackage ./ancient-aliens { };
       winters-fury = final.callPackage ./winters-fury { };
       valiant = final.callPackage ./valiant { };
@@ -19,6 +20,7 @@
     packages.x86_64-linux =
       let pkgs = import nixpkgs { overlays = [ self.overlay ]; };
       in {
+        doom-nix-update = pkgs.doom-nix-update;
         ancient-aliens = pkgs.ancient-aliens;
         winters-fury = pkgs.winters-fury;
         valiant = pkgs.valiant;
